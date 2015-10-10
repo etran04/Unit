@@ -13,7 +13,7 @@ import ParseUI
 
 class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
-    let signInVC = ParseSignUpVC()
+    let signUpVC = ParseSignUpVC()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,11 +29,11 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
             
             loginVC.fields = [PFLogInFields.UsernameAndPassword, PFLogInFields.LogInButton, PFLogInFields.SignUpButton, PFLogInFields.PasswordForgotten]
             
-            signInVC.fields = [PFSignUpFields.UsernameAndPassword, PFSignUpFields.SignUpButton, PFSignUpFields.Email, PFSignUpFields.DismissButton]
+            signUpVC.fields = [PFSignUpFields.UsernameAndPassword, PFSignUpFields.SignUpButton, PFSignUpFields.Email, PFSignUpFields.DismissButton]
         
-            loginVC.signUpController = signInVC
+            loginVC.signUpController = signUpVC
             loginVC.delegate = self
-            signInVC.delegate = self
+            signUpVC.delegate = self
             self.presentViewController(loginVC, animated: false, completion: nil)
         }
     }
@@ -48,10 +48,10 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
-        self.signInVC.dismissViewControllerAnimated(true, completion: nil)
+        self.signUpVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) -> Void {
-        self.signInVC.dismissViewControllerAnimated(true, completion: nil)
+        self.signUpVC.dismissViewControllerAnimated(true, completion: nil)
     }
 }
