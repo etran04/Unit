@@ -11,6 +11,10 @@ import Foundation
 
 class CreateTeamViewController: UIViewController {
     
+    @IBOutlet weak var teamNameField: UITextField!
+    @IBOutlet weak var emailListField: UITextField!
     
-    
+    @IBAction func createTeamButtonPressed(sender: AnyObject) {
+        
+    }
 }

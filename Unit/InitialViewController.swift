@@ -14,15 +14,21 @@ import ParseUI
 class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate {
     
     let signUpVC = ParseSignUpVC()
+    var found : Bool!, didLogin : Bool!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        found = false;
+        didLogin = false;
     }
     
     override func viewDidAppear(animated: Bool) {
-        //PFUser.logOut()
-        if(PFUser.currentUser() != nil) {
+        if (didLogin == true && found ==  false) {
+            self.performSegueWithIdentifier("goToCreateTeam", sender: self)
+            self.found = true;
+        }
+        else if(PFUser.currentUser() != nil) {
             self.performSegueWithIdentifier("goToMainVC", sender: self)
         }
         else {
@@ -45,21 +51,19 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
 
     func logInViewController(controller: PFLogInViewController, didLogInUser user: PFUser) -> Void {
         self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
+        
+        didLogin = true;
         // Check if user is suppose to be assigned a team
         let query = PFQuery(className:"EmailToTeam")
-        query.findObjectsInBackgroundWithBlock() {
+        query.findObjectsInBackgroundWithBlock({
             (emailToTeams: [PFObject]?, error: NSError?) -> Void in
             if error == nil && emailToTeams != nil {
-//                if emailToTeams?.count == 0 {
-//                    // If emailToTeams doesn't have anything in them, go straight to create team VC
-//                    // Special case for no EmailToTeam item in database
-//                    // performSegue ("goToCreateTeamVC")
-//                }
+                //                if emailToTeams?.count == 0 {
+                //                    // If emailToTeams doesn't have anything in them, go straight to create team VC
+                //                    // Special case for no EmailToTeam item in database
+                //                    // performSegue ("goToCreateTeamVC")
+                //                }
                 
-                var foundMatch = false
                 for email in emailToTeams! {
                     // Found that the email matches, user was invited to a team basically
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
@@ -79,20 +83,21 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                                 print("Error on query for teams")
                             }
                         }
-                        foundMatch = true
+                        self.found = true
                     }
-                }
-                    
-                if !foundMatch {
-                    // Couldn't find a match for emailToTeams
-                    // performSegue("goToCreateTeamVC")
                 }
                 
             } else {
                 print("Error on query for EmailToTeam")
             }
-        }
-
+            
+        })
+//        query.findObjectsInBackgroundWithBlock() {
+//            (emailToTeams: [PFObject]?, error: NSError?) -> Void in
+//                    }
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
         self.signUpVC.dismissViewControllerAnimated(true, completion: nil)
     }
     

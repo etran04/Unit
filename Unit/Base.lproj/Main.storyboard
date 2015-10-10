@@ -24,6 +24,66 @@
             </objects>
             <point key="canvasLocation" x="952" y="666"/>
         </scene>
+        <!--Create Team View Controller-->
+        <scene sceneID="5wY-mj-M4Z">
+            <objects>
+                <viewController id="4rD-nA-7wW" customClass="CreateTeamViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qE3-wj-vy6"/>
+                        <viewControllerLayoutGuide type="bottom" id="EmU-EK-TuM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eC6-vG-ush">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dv-V4-zFu">
+                                <rect key="frame" x="234" y="51" width="133" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dnr-Zn-VDE">
+                                <rect key="frame" x="290" y="138" width="173" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Member Emails: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0T-je-V1w">
+                                <rect key="frame" x="214" y="242" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-Ph-bN8">
+                                <rect key="frame" x="183" y="142" width="94" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-3U-oZI">
+                                <rect key="frame" x="273" y="533" width="55" height="30"/>
+                                <state key="normal" title="Confirm"/>
+                                <connections>
+                                    <action selector="createTeamButtonPressed:" destination="4rD-nA-7wW" eventType="touchUpInside" id="5ch-qQ-vcM"/>
+                                    <segue destination="K17-l4-dH5" kind="presentation" id="wBA-jV-5sE"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-8K-s9U">
+                                <rect key="frame" x="144" y="290" width="312" height="186"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailListField" destination="eGq-8K-s9U" id="CMF-L1-mEx"/>
+                        <outlet property="teamNameField" destination="Dnr-Zn-VDE" id="k7x-Xa-vkQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="inz-gm-9iP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="944" y="-763"/>
+        </scene>
         <!--Initial View Controller-->
         <scene sceneID="g18-6I-5mg">
             <objects>
@@ -39,6 +99,7 @@
                     </view>
                     <connections>
                         <segue destination="K17-l4-dH5" kind="presentation" identifier="goToMainVC" id="98l-1m-Aua"/>
+                        <segue destination="4rD-nA-7wW" kind="presentation" identifier="goToCreateTeam" id="AIE-tl-6gT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iT-Fm-x50" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -155,7 +216,7 @@
         <!--Settings-->
         <scene sceneID="N5y-ax-gFy">
             <objects>
-                <viewController id="z4B-zw-3jI" sceneMemberID="viewController">
+                <viewController id="z4B-zw-3jI" customClass="SettingsViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6sc-Pd-LJ4"/>
                         <viewControllerLayoutGuide type="bottom" id="qkA-xk-VfT"/>
@@ -163,13 +224,26 @@
                     <view key="view" contentMode="scaleToFill" id="4W3-9G-PG9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-eh-smb">
+                                <rect key="frame" x="248" y="306" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutButtonPressed:" destination="z4B-zw-3jI" eventType="touchUpInside" id="4Nl-dI-frv"/>
+                                    <segue destination="RnG-hU-acG" kind="presentation" id="a9S-RE-hhR"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="ijb-7Y-haQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWP-L1-GnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="1490"/>
+            <point key="canvasLocation" x="-6" y="1386"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wBA-jV-5sE"/>
+    </inferredMetricsTieBreakers>
 </document>
