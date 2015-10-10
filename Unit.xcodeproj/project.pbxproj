@@ -27,6 +27,7 @@
 		942205071BC9080500363A8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942205061BC9080500363A8A /* SystemConfiguration.framework */; };
 		942205091BC9080B00363A8A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942205081BC9080B00363A8A /* libz.tbd */; };
 		9422050B1BC9081100363A8A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422050A1BC9081100363A8A /* libsqlite3.tbd */; };
+		9422050D1BC90B0E00363A8A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422050C1BC90B0E00363A8A /* Team.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		942205061BC9080500363A8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		942205081BC9080B00363A8A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9422050A1BC9081100363A8A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9422050C1BC90B0E00363A8A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				07C650B51BC8F6FA00914FA0 /* Task.swift */,
 				07C650B71BC8F76600914FA0 /* User.swift */,
+				9422050C1BC90B0E00363A8A /* Team.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
 				07C650A31BC8F17A00914FA0 /* ViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
