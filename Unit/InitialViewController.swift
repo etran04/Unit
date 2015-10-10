@@ -21,6 +21,7 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
     }
     
     override func viewDidAppear(animated: Bool) {
+        //PFUser.logOut()
         if(PFUser.currentUser() != nil) {
             self.performSegueWithIdentifier("goToMainVC", sender: self)
         }
@@ -47,6 +48,51 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
+        // Check if user is suppose to be assigned a team
+        let query = PFQuery(className:"EmailToTeam")
+        query.findObjectsInBackgroundWithBlock() {
+            (emailToTeams: [PFObject]?, error: NSError?) -> Void in
+            if error == nil && emailToTeams != nil {
+//                if emailToTeams?.count == 0 {
+//                    // If emailToTeams doesn't have anything in them, go straight to create team VC
+//                    // Special case for no EmailToTeam item in database
+//                    // performSegue ("goToCreateTeamVC")
+//                }
+                
+                var foundMatch = false
+                for email in emailToTeams! {
+                    // Found that the email matches, user was invited to a team basically
+                    if email["Email"] as! String == (PFUser.currentUser()?.email)!{
+                        
+                        let invitedTo = email["TeamName"]
+                        
+                        // Get a list of all teams with the
+                        let teams = PFQuery(className:"Team")
+                        teams.whereKey("name", equalTo:invitedTo)
+                        teams.getFirstObjectInBackgroundWithBlock {
+                            (teamToAdd: PFObject?, error: NSError?) -> Void in
+                            if error == nil {
+                                // For each team, add it to the user's list of teams
+                                PFUser.currentUser()?.addObject(teamToAdd!, forKey: "TeamIds")
+                            } else {
+                                // Log details of the failure
+                                print("Error on query for teams")
+                            }
+                        }
+                        foundMatch = true
+                    }
+                }
+                    
+                if !foundMatch {
+                    // Couldn't find a match for emailToTeams
+                    // performSegue("goToCreateTeamVC")
+                }
+                
+            } else {
+                print("Error on query for EmailToTeam")
+            }
+        }
+
         self.signUpVC.dismissViewControllerAnimated(true, completion: nil)
     }
     
