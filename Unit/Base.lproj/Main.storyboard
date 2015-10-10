@@ -105,7 +105,9 @@
                             <outlet property="delegate" destination="IDp-Ti-6W0" id="UPY-23-tef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tasks" id="eps-0z-MpU"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="eps-0z-MpU">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4IT-Kq-Nqt"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alN-7H-ZBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
