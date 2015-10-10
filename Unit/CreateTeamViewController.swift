@@ -37,7 +37,6 @@ class CreateTeamViewController: UIViewController {
         // Create the team and save into Parse database
         let newTeam = PFObject(className:"Team")
         newTeam["name"] = teamName
-        //newTeam.addObject(PFUser.currentUser()!, forKey: "Users")
         newTeam.saveInBackground()
         
         // Save team to current user
@@ -47,20 +46,12 @@ class CreateTeamViewController: UIViewController {
             newTeam.saveInBackground()
         })
         
-
         
         for email in emailsArray {
             let newEmailToTeam = PFObject(className:"EmailToTeam")
             newEmailToTeam["Email"] = email
             newEmailToTeam["TeamName"] = teamName
-            newEmailToTeam.saveInBackgroundWithBlock {
-                (success: Bool, error: NSError?) -> Void in
-                if (success) {
-                    // Get a list of all teams with the
-                } else {
-                    // There was a problem, check error.description
-                }
-            }
+            newEmailToTeam.saveInBackground()
         }
         
     }
