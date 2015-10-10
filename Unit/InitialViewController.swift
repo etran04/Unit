@@ -23,6 +23,11 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
         didLogin = false;
     }
     
+    
+    func getToCreateVC() {
+        self.performSegueWithIdentifier("goToCreateTeam", sender: self)
+    }
+    
     override func viewDidAppear(animated: Bool) {
         if (didLogin == true && found ==  false) {
             self.performSegueWithIdentifier("goToCreateTeam", sender: self)
@@ -58,17 +63,18 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
         query.findObjectsInBackgroundWithBlock({
             (emailToTeams: [PFObject]?, error: NSError?) -> Void in
             if error == nil && emailToTeams != nil {
-                //                if emailToTeams?.count == 0 {
-                //                    // If emailToTeams doesn't have anything in them, go straight to create team VC
-                //                    // Special case for no EmailToTeam item in database
-                //                    // performSegue ("goToCreateTeamVC")
-                //                }
                 
                 for email in emailToTeams! {
                     // Found that the email matches, user was invited to a team basically
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
+                        print("email: \(email)")
                         self.found = true
+                        return
                     }
+                }
+                
+                if !self.found {
+                    self.getToCreateVC()
                 }
                 
             } else {
@@ -80,6 +86,46 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
         self.signUpVC.dismissViewControllerAnimated(true, completion: nil)
+        
+        // Check if user is suppose to be assigned a team
+        let query = PFQuery(className:"EmailToTeam")
+        query.findObjectsInBackgroundWithBlock({
+            (emailToTeams: [PFObject]?, error: NSError?) -> Void in
+            if error == nil && emailToTeams != nil {
+                print(emailToTeams)
+                for email in emailToTeams! {
+                    // Found that the email matches, user was invited to a team basically
+                    if email["Email"] as! String == (PFUser.currentUser()?.email)!{
+                        
+                        let invitedTo = email["TeamName"]
+                        
+                        // Get the team and add that team to the list of teams for the user
+                        let teams = PFQuery(className:"Team")
+                        teams.whereKey("name", equalTo:invitedTo)
+                        teams.getFirstObjectInBackgroundWithBlock {
+                            (teamToAdd: PFObject?, error: NSError?) -> Void in
+                            if error == nil {
+                                print("team to add: \(teamToAdd)")
+                                // For each team, add it to the user's list of teams
+                                PFUser.currentUser()?.addObject(teamToAdd!, forKey: "TeamIds")
+                                PFUser.currentUser()?.saveInBackground()
+                                
+                                teamToAdd?.addObject((PFUser.currentUser())!, forKey: "Users")
+                                teamToAdd?.saveInBackground()
+                                
+                            } else {
+                                // Log details of the failure
+                                print("Error on query for teams")
+                            }
+                        }
+                    }
+                }
+                
+            } else {
+                print("Error on query for EmailToTeam")
+            }
+            
+        })
     }
     
     func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController) -> Void {
