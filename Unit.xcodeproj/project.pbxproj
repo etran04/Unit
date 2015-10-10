@@ -34,6 +34,7 @@
 		9422051B1BC92AB900363A8A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422051A1BC92AB900363A8A /* EventKitUI.framework */; };
 		9422051D1BC92ABF00363A8A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422051C1BC92ABF00363A8A /* EventKit.framework */; };
 		9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* InitialViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		94664FD11BC9538700B70A64 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94664FD01BC9538700B70A64 /* AddTaskViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		942205181BC92A0700363A8A /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpVC.swift; sourceTree = "<group>"; };
 		9422051A1BC92AB900363A8A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		9422051C1BC92ABF00363A8A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		94664FD01BC9538700B70A64 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 				07C650A21BC8F17A00914FA0 /* InitialViewController.swift */,
 				942205101BC91DDB00363A8A /* ParseLoginViewController.swift */,
 				07FF73271BC92CFD005AF366 /* RootTableViewController.swift */,
+				94664FD01BC9538700B70A64 /* AddTaskViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */,
 				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
+				94664FD11BC9538700B70A64 /* AddTaskViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
 				07C650B61BC8F6FA00914FA0 /* Task.swift in Sources */,
 				07FF73281BC92CFD005AF366 /* RootTableViewController.swift in Sources */,

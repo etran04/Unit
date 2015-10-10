@@ -108,23 +108,19 @@
                     <navigationItem key="navigationItem" title="Tasks" id="eps-0z-MpU">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4IT-Kq-Nqt">
                             <connections>
-                                <action selector="buttonPressed:" destination="IDp-Ti-6W0" id="mRk-VT-zyx"/>
                                 <segue destination="032-bm-xkc" kind="presentation" id="mw5-w3-qp8"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="addTaskButton" destination="4IT-Kq-Nqt" id="xdU-Qq-mWm"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alN-7H-ZBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1671" y="-3"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Task View Controller-->
         <scene sceneID="qYw-9i-l8Z">
             <objects>
-                <viewController id="032-bm-xkc" sceneMemberID="viewController">
+                <viewController id="032-bm-xkc" customClass="AddTaskViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="huf-it-hdn"/>
                         <viewControllerLayoutGuide type="bottom" id="bm8-Wv-IWI"/>
