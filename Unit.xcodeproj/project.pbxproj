@@ -15,6 +15,7 @@
 		07C650B81BC8F76600914FA0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650B71BC8F76600914FA0 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650B91BC8FBB300914FA0 /* GlobalConstants.swift */; settings = {ASSET_TAGS = (); }; };
 		07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650BD1BC9162100914FA0 /* TabVC.swift */; settings = {ASSET_TAGS = (); }; };
+		07FF73281BC92CFD005AF366 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73271BC92CFD005AF366 /* RootTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		942204F51BC9072400363A8A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F41BC9072400363A8A /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F71BC9072B00363A8A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F61BC9072B00363A8A /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F91BC907D900363A8A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F81BC907D900363A8A /* AudioToolbox.framework */; };
@@ -46,6 +47,7 @@
 		07C650B71BC8F76600914FA0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		07C650B91BC8FBB300914FA0 /* GlobalConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		07C650BD1BC9162100914FA0 /* TabVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabVC.swift; sourceTree = "<group>"; };
+		07FF73271BC92CFD005AF366 /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		942204F41BC9072400363A8A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Unit/Parse.framework; sourceTree = "<group>"; };
 		942204F61BC9072B00363A8A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Unit/Bolts.framework; sourceTree = "<group>"; };
 		942204F81BC907D900363A8A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -129,6 +131,7 @@
 				07C650BD1BC9162100914FA0 /* TabVC.swift */,
 				07C650A21BC8F17A00914FA0 /* InitialViewController.swift */,
 				942205101BC91DDB00363A8A /* ParseLoginViewController.swift */,
+				07FF73271BC92CFD005AF366 /* RootTableViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
 				07C650B61BC8F6FA00914FA0 /* Task.swift in Sources */,
+				07FF73281BC92CFD005AF366 /* RootTableViewController.swift in Sources */,
 				07C650A11BC8F17A00914FA0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
