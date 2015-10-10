@@ -18,6 +18,7 @@
 		07FF73281BC92CFD005AF366 /* RootTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73271BC92CFD005AF366 /* RootTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07FF732C1BC95FBA005AF366 /* CreateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732B1BC95FBA005AF366 /* CreateTeamViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07FF732E1BC963B9005AF366 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732D1BC963B9005AF366 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07FF73301BC9B769005AF366 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		942204F51BC9072400363A8A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F41BC9072400363A8A /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F71BC9072B00363A8A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F61BC9072B00363A8A /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F91BC907D900363A8A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F81BC907D900363A8A /* AudioToolbox.framework */; };
@@ -54,6 +55,7 @@
 		07FF73271BC92CFD005AF366 /* RootTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootTableViewController.swift; sourceTree = "<group>"; };
 		07FF732B1BC95FBA005AF366 /* CreateTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewController.swift; sourceTree = "<group>"; };
 		07FF732D1BC963B9005AF366 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		942204F41BC9072400363A8A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Unit/Parse.framework; sourceTree = "<group>"; };
 		942204F61BC9072B00363A8A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Unit/Bolts.framework; sourceTree = "<group>"; };
 		942204F81BC907D900363A8A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -142,6 +144,7 @@
 				07FF73271BC92CFD005AF366 /* RootTableViewController.swift */,
 				94664FD01BC9538700B70A64 /* AddTaskViewController.swift */,
 				07FF732D1BC963B9005AF366 /* SettingsViewController.swift */,
+				07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */,
 				9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */,
 				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
+				07FF73301BC9B769005AF366 /* EditTaskViewController.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				94664FD11BC9538700B70A64 /* AddTaskViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,

@@ -52,12 +52,8 @@ class AddTaskViewController : UIViewController {
                     print("YOU SUCK")
                 }
             }
-            
-            
-            
+ 
         })
-        
-//        let teamId : String =
-        
+
     }
 }
