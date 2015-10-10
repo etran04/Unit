@@ -66,6 +66,8 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                 
                 for email in emailToTeams! {
                     // Found that the email matches, user was invited to a team basically
+                    print(email)
+                    print(PFUser.currentUser()?.email)
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
                         print("email: \(email)")
                         self.found = true
@@ -73,7 +75,7 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                     }
                 }
                 
-                if !self.found {
+                if self.found == false {
                     self.getToCreateVC()
                 }
                 
@@ -92,26 +94,23 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
         query.findObjectsInBackgroundWithBlock({
             (emailToTeams: [PFObject]?, error: NSError?) -> Void in
             if error == nil && emailToTeams != nil {
-                print(emailToTeams)
                 for email in emailToTeams! {
                     // Found that the email matches, user was invited to a team basically
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
                         
                         let invitedTo = email["TeamName"]
-                        
                         // Get the team and add that team to the list of teams for the user
                         let teams = PFQuery(className:"Team")
                         teams.whereKey("name", equalTo:invitedTo)
                         teams.getFirstObjectInBackgroundWithBlock {
                             (teamToAdd: PFObject?, error: NSError?) -> Void in
                             if error == nil {
-                                print("team to add: \(teamToAdd)")
                                 // For each team, add it to the user's list of teams
                                 PFUser.currentUser()?.addObject(teamToAdd!, forKey: "TeamIds")
-                                PFUser.currentUser()?.saveInBackground()
-                                
-                                teamToAdd?.addObject((PFUser.currentUser())!, forKey: "Users")
-                                teamToAdd?.saveInBackground()
+                                PFUser.currentUser()!.saveInBackgroundWithBlock({(success: Bool, error: NSError?) -> Void in
+                                    teamToAdd?.addObject((PFUser.currentUser())!, forKey: "Users")
+                                    teamToAdd?.saveInBackground()
+                                })
                                 
                             } else {
                                 // Log details of the failure
