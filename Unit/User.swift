@@ -16,6 +16,7 @@ class User {
     let name : String?
     var teams = [Team]()
     var tasks = [Task]()
+    var currentTeam : Team?
     
     // Constructs a User object
     init(user_email : String, user_password : String, user_name : String) {
@@ -26,6 +27,14 @@ class User {
     
     func getTeams() -> [Team] {
         return teams
+    }
+    
+    func setCurrentTeam(team : Team) {
+        currentTeam = team
+    }
+    
+    func getCurrentTeam() -> Team {
+        return currentTeam!
     }
     
     func addTeam(team : Team) {
