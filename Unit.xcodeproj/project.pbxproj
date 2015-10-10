@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		07C650A11BC8F17A00914FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A01BC8F17A00914FA0 /* AppDelegate.swift */; };
-		07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* InitialViewController.swift */; };
 		07C650A61BC8F17A00914FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A41BC8F17A00914FA0 /* Main.storyboard */; };
 		07C650A81BC8F17A00914FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A71BC8F17A00914FA0 /* Assets.xcassets */; };
 		07C650AB1BC8F17A00914FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A91BC8F17A00914FA0 /* LaunchScreen.storyboard */; };
@@ -252,9 +251,7 @@
 				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
 				07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */,
-				07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */,
 				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
-				07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
 				07C650B61BC8F6FA00914FA0 /* Task.swift in Sources */,
