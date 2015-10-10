@@ -11,9 +11,11 @@ import Parse
 import Bolts
 
 class User {
-    let email : String!
-    let password : String!
-    let name : String!
+    let email : String?
+    let password : String?
+    let name : String?
+    var teams = [Team]()
+    var tasks = [Task]()
     
     // Constructs a User object
     init(user_email : String, user_password : String, user_name : String) {
@@ -22,5 +24,19 @@ class User {
         name = user_name
     }
     
+    func getTeams() -> [Team] {
+        return teams
+    }
     
+    func addTeam(team : Team) {
+        teams.append(team)
+    }
+    
+    func getTasks() -> [Task] {
+        return tasks
+    }
+    
+    func addTask(task : Task) {
+        tasks.append(task)
+    }
 }
