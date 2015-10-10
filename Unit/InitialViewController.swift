@@ -67,22 +67,6 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                 for email in emailToTeams! {
                     // Found that the email matches, user was invited to a team basically
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
-                        
-                        let invitedTo = email["TeamName"]
-                        
-                        // Get a list of all teams with the
-                        let teams = PFQuery(className:"Team")
-                        teams.whereKey("name", equalTo:invitedTo)
-                        teams.getFirstObjectInBackgroundWithBlock {
-                            (teamToAdd: PFObject?, error: NSError?) -> Void in
-                            if error == nil {
-                                // For each team, add it to the user's list of teams
-                                PFUser.currentUser()?.addObject(teamToAdd!, forKey: "TeamIds")
-                            } else {
-                                // Log details of the failure
-                                print("Error on query for teams")
-                            }
-                        }
                         self.found = true
                     }
                 }
@@ -92,9 +76,6 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
             }
             
         })
-//        query.findObjectsInBackgroundWithBlock() {
-//            (emailToTeams: [PFObject]?, error: NSError?) -> Void in
-//                    }
     }
     
     func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser) -> Void {
