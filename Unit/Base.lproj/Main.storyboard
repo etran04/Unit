@@ -192,12 +192,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
-                                <rect key="frame" x="273" y="491" width="55" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-lF-rpe">
+                                <rect key="frame" x="38" y="100" width="301" height="230"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g2m-Yz-nXl">
+                                <rect key="frame" x="38" y="369" width="301" height="29"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="Medium"/>
+                                    <segment title="High"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
+                                <rect key="frame" x="50" y="491" width="500" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="addTaskButtonPressed:" destination="032-bm-xkc" eventType="touchUpInside" id="w88-du-J7b"/>
+                                    <segue destination="K17-l4-dH5" kind="presentation" id="KfT-k6-Bs9"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -208,6 +225,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Task" id="2L6-3Y-w9J"/>
+                    <connections>
+                        <outlet property="priorityLevel" destination="g2m-Yz-nXl" id="pEh-u7-3mr"/>
+                        <outlet property="taskDescription" destination="Bu6-lF-rpe" id="UuN-gE-XNP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blM-Ec-jQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -244,6 +265,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wBA-jV-5sE"/>
+        <segue reference="KfT-k6-Bs9"/>
     </inferredMetricsTieBreakers>
 </document>

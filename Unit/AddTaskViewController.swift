@@ -13,38 +13,51 @@ import Parse
 class AddTaskViewController : UIViewController {
     
     @IBOutlet weak var addTaskButton: UIButton!
-    @IBOutlet weak var cancelTaskButton: UIButton!
     @IBOutlet weak var taskDescription: UITextField!
     @IBOutlet weak var priorityLevel: UISegmentedControl!
     
-    @IBAction func buttonPressed(sender: AnyObject) {
-        let newTask = PFObject(className: "Task")
-        newTask["teamId"] = "YEET"
-        newTask["name"] = "BRUH"
-        newTask.saveInBackgroundWithBlock {
-            (success : Bool, error : NSError?) -> Void in
-            if (success) {
-                let query = PFQuery(className:"Team")
-                query.getObjectInBackgroundWithId("Zqz4CaACw2") {
-                    (team: PFObject?, error: NSError?) -> Void in
-                    if error == nil && team != nil {
-                        team!.addObject(newTask, forKey: "Tasks")
-                        team!.saveInBackgroundWithBlock {
-                            (success : Bool, error : NSError?) -> Void in
-                            if (success) {
-                                
+    @IBAction func addTaskButtonPressed(sender: AnyObject) {
+        let user = PFUser.currentUser()
+        
+        user?.fetchInBackgroundWithBlock({(object: PFObject?, error: NSError?) -> Void in
+            let teamId = object!.objectForKey("currentTeam") as! String
+            
+            let newTask = PFObject(className: "Task")
+            //TODO - access current team to get teamID. store locally to use in getObjectInBackgroundWithId
+            newTask["teamId"] = teamId
+            newTask["description"] = self.taskDescription.text
+            newTask["priorityLevel"] = self.priorityLevel.selectedSegmentIndex
+            newTask.saveInBackgroundWithBlock {
+                (success : Bool, error : NSError?) -> Void in
+                if (success) {
+                    let query = PFQuery(className:"Team")
+                    query.getObjectInBackgroundWithId(teamId) {
+                        (team: PFObject?, error: NSError?) -> Void in
+                        if error == nil && team != nil {
+                            team!.addObject(newTask, forKey: "Tasks")
+                            team!.saveInBackgroundWithBlock {
+                                (success : Bool, error : NSError?) -> Void in
+                                if (success) {
+                                    //TODO - close New Task screen and go back to main task screen
+                                }
+                                else {
+                                    print("SUCKER")
+                                }
                             }
-                            else {
-                                print("SUCKER")
-                            }
+                        } else {
+                            print(error)
                         }
-                    } else {
-                        print(error)
                     }
+                } else {
+                    print("YOU SUCK")
                 }
-            } else {
-                print("YOU SUCK")
             }
-        }
+            
+            
+            
+        })
+        
+//        let teamId : String =
+        
     }
 }
