@@ -19,21 +19,29 @@ class RootTableViewController: UITableViewController {
         
         taskDescriptions = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
         
-//        let query = PFQuery(className: "User")
-//        query.findObjectsInBackgroundWithBlock( {
-//            (objects : [PFObject]?, error: NSError?) -> Void in
-//            if error == nil{
-//                if let objects = objects as? [PFObject]! {
-//                    for object in objects{
-//                        print(object["username"] as! String)
-//                        self.teamMembers.append(object["username"] as! String)
-//                    }
-//                }
-//            }else{
-//                //Handle error
-//            }
-//        })
-        teamMembers = ["Juan", "Quan", "Tran", "Wan"]
+        teamMembers.append("Unassigned Tasks")
+        
+        let user = PFUser.currentUser()
+        
+        user?.fetchInBackgroundWithBlock({(object: PFObject?, error: NSError?) -> Void in
+            let teamId = object!.objectForKey("currentTeam") as! String
+            
+            let query = PFQuery(className:"Team")
+            query.includeKey("Users")
+            query.getObjectInBackgroundWithId(teamId) {
+                (team: PFObject?, error: NSError?) -> Void in
+                print(team)
+                if error == nil && team != nil {
+                    for user in team?["Users"] as! [PFUser] {
+                        print(user["username"] as! String)
+                        self.teamMembers.append(user["username"] as! String)
+                    }
+                }
+                self.tableView.reloadData()
+            }
+        })
+            
+        //teamMembers = ["Juan", "Quan", "Tran", "Wan"]
         tableView.estimatedRowHeight = 50
 
         // Uncomment the following line to preserve selection between presentations
@@ -56,6 +64,7 @@ class RootTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        print(teamMembers.count)
         return teamMembers.count
     }
 
