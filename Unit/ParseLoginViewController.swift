@@ -20,7 +20,7 @@ class ParseLoginVC : PFLogInViewController, PFSignUpViewControllerDelegate {
     
     override func viewDidAppear(animated: Bool) {
         if(PFUser.currentUser() != nil) {
-            self.performSegueWithIdentifier("goToMainVC", sender: self)
+            //self.performSegueWithIdentifier("goToMainVC", sender: self)
         }
     }
     

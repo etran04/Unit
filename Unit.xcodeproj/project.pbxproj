@@ -33,6 +33,7 @@
 		942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205181BC92A0700363A8A /* ParseSignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
 		9422051B1BC92AB900363A8A /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422051A1BC92AB900363A8A /* EventKitUI.framework */; };
 		9422051D1BC92ABF00363A8A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422051C1BC92ABF00363A8A /* EventKit.framework */; };
+		9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* InitialViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -254,6 +255,7 @@
 				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
 				07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */,
+				9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */,
 				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
