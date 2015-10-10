@@ -9,8 +9,7 @@
 import Foundation
 
 enum Status {
-    case Unassigned
-    case Assigned
+    case Unstarted
     case InProgress
     case Finished
 }
