@@ -11,14 +11,40 @@ import Parse
 
 class RootTableViewController: UITableViewController {
     
+    var taskDescriptions = [String]()
+    var teamMembers = [String]()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        taskDescriptions = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
+        
+//        let query = PFQuery(className: "User")
+//        query.findObjectsInBackgroundWithBlock( {
+//            (objects : [PFObject]?, error: NSError?) -> Void in
+//            if error == nil{
+//                if let objects = objects as? [PFObject]! {
+//                    for object in objects{
+//                        print(object["username"] as! String)
+//                        self.teamMembers.append(object["username"] as! String)
+//                    }
+//                }
+//            }else{
+//                //Handle error
+//            }
+//        })
+        teamMembers = ["Juan", "Quan", "Tran", "Wan"]
+        tableView.estimatedRowHeight = 50
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,31 +56,45 @@ class RootTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return teamMembers.count
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return taskDescriptions.count
+    }
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return teamMembers[section]
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
         // Configure the cell...
-
+        let cell =
+        self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    
+        let row = indexPath.row
+        cell.textLabel!.font =
+        UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        cell.textLabel!.text = taskDescriptions[row]
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
+//    // Override to support conditional editing of the table view.
+//    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+//        // Return false if you do not want the specified item to be editable.
+//        let cell =
+//        self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+//        
+//        let row = indexPath.row
+//        cell.textLabel!.font =
+//            UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+//        cell.textLabel!.text = taskDescriptions[row]
+//        return cell
+//    }
+
 
     /*
     // Override to support editing the table view.
