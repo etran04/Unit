@@ -7,9 +7,43 @@
 //
 
 import UIKit
+import Parse
 
 class RootTableViewController: UITableViewController {
 
+    @IBOutlet weak var addTaskButton: UIBarButtonItem!
+    
+    @IBAction func buttonPressed(sender: AnyObject) {
+        let newTask = PFObject(className: "Task")
+        newTask["teamId"] = "YEET"
+        newTask["name"] = "BRUH"
+        newTask.saveInBackgroundWithBlock {
+            (success : Bool, error : NSError?) -> Void in
+            if (success) {
+                let query = PFQuery(className:"Team")
+                query.getObjectInBackgroundWithId("Zqz4CaACw2") {
+                    (team: PFObject?, error: NSError?) -> Void in
+                    if error == nil && team != nil {
+                        team!.addObject(newTask, forKey: "Tasks")
+                        team!.saveInBackgroundWithBlock {
+                            (success : Bool, error : NSError?) -> Void in
+                            if (success) {
+                                
+                            }
+                            else {
+                                print("SUCKER")
+                            }
+                        }
+                    } else {
+                        print(error)
+                    }
+                }
+            } else {
+                print("YOU SUCK")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
