@@ -30,7 +30,7 @@
 		9422050D1BC90B0E00363A8A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422050C1BC90B0E00363A8A /* Team.swift */; settings = {ASSET_TAGS = (); }; };
 		9422050F1BC9186900363A8A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422050E1BC9186900363A8A /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
 		942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205101BC91DDB00363A8A /* ParseLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		942205131BC91FC100363A8A /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205121BC91FC100363A8A /* ParseSignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
+		942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205181BC92A0700363A8A /* ParseSignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 		9422050C1BC90B0E00363A8A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		9422050E1BC9186900363A8A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Unit/ParseUI.framework; sourceTree = "<group>"; };
 		942205101BC91DDB00363A8A /* ParseLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginViewController.swift; sourceTree = "<group>"; };
-		942205121BC91FC100363A8A /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseSignUpVC.swift; path = ../../../../Downloads/ParseSignUpVC.swift; sourceTree = "<group>"; };
+		942205181BC92A0700363A8A /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,10 +120,9 @@
 		07C650B21BC8F66600914FA0 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				07C650A21BC8F17A00914FA0 /* ViewController.swift */,
+				942205181BC92A0700363A8A /* ParseSignUpVC.swift */,
 				07C650BD1BC9162100914FA0 /* TabVC.swift */,
 				07C650A21BC8F17A00914FA0 /* InitialViewController.swift */,
-				942205121BC91FC100363A8A /* ParseSignUpVC.swift */,
 				942205101BC91DDB00363A8A /* ParseLoginViewController.swift */,
 			);
 			name = VCs;
@@ -242,11 +241,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				942205131BC91FC100363A8A /* ParseSignUpVC.swift in Sources */,
 				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
 				07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */,
-				07C650A31BC8F17A00914FA0 /* ViewController.swift in Sources */,
+				07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */,
+				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
 				07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
