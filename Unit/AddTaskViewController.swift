@@ -11,6 +11,12 @@ import UIKit
 import Parse
 
 class AddTaskViewController : UIViewController {
+    
+    @IBOutlet weak var addTaskButton: UIButton!
+    @IBOutlet weak var cancelTaskButton: UIButton!
+    @IBOutlet weak var taskDescription: UITextField!
+    @IBOutlet weak var priorityLevel: UISegmentedControl!
+    
     @IBAction func buttonPressed(sender: AnyObject) {
         let newTask = PFObject(className: "Task")
         newTask["teamId"] = "YEET"
