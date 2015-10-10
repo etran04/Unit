@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		07C650A11BC8F17A00914FA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A01BC8F17A00914FA0 /* AppDelegate.swift */; };
-		07C650A31BC8F17A00914FA0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* ViewController.swift */; };
+		07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* InitialViewController.swift */; };
 		07C650A61BC8F17A00914FA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A41BC8F17A00914FA0 /* Main.storyboard */; };
 		07C650A81BC8F17A00914FA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A71BC8F17A00914FA0 /* Assets.xcassets */; };
 		07C650AB1BC8F17A00914FA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C650A91BC8F17A00914FA0 /* LaunchScreen.storyboard */; };
@@ -28,12 +28,15 @@
 		942205091BC9080B00363A8A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 942205081BC9080B00363A8A /* libz.tbd */; };
 		9422050B1BC9081100363A8A /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422050A1BC9081100363A8A /* libsqlite3.tbd */; };
 		9422050D1BC90B0E00363A8A /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9422050C1BC90B0E00363A8A /* Team.swift */; settings = {ASSET_TAGS = (); }; };
+		9422050F1BC9186900363A8A /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422050E1BC9186900363A8A /* ParseUI.framework */; settings = {ASSET_TAGS = (); }; };
+		942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205101BC91DDB00363A8A /* ParseLoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		942205131BC91FC100363A8A /* ParseSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942205121BC91FC100363A8A /* ParseSignUpVC.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07C6509D1BC8F17A00914FA0 /* Unit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C650A01BC8F17A00914FA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07C650A21BC8F17A00914FA0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07C650A21BC8F17A00914FA0 /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		07C650A51BC8F17A00914FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07C650A71BC8F17A00914FA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07C650AA1BC8F17A00914FA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +57,9 @@
 		942205081BC9080B00363A8A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		9422050A1BC9081100363A8A /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		9422050C1BC90B0E00363A8A /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		9422050E1BC9186900363A8A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Unit/ParseUI.framework; sourceTree = "<group>"; };
+		942205101BC91DDB00363A8A /* ParseLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseLoginViewController.swift; sourceTree = "<group>"; };
+		942205121BC91FC100363A8A /* ParseSignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParseSignUpVC.swift; path = ../../../../Downloads/ParseSignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 				942204F91BC907D900363A8A /* AudioToolbox.framework in Frameworks */,
 				942204F51BC9072400363A8A /* Parse.framework in Frameworks */,
 				942204F71BC9072B00363A8A /* Bolts.framework in Frameworks */,
+				9422050F1BC9186900363A8A /* ParseUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,7 +121,9 @@
 		07C650B21BC8F66600914FA0 /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				07C650A21BC8F17A00914FA0 /* ViewController.swift */,
+				07C650A21BC8F17A00914FA0 /* InitialViewController.swift */,
+				942205121BC91FC100363A8A /* ParseSignUpVC.swift */,
+				942205101BC91DDB00363A8A /* ParseLoginViewController.swift */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -140,6 +149,7 @@
 		942204F31BC9071800363A8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9422050E1BC9186900363A8A /* ParseUI.framework */,
 				9422050A1BC9081100363A8A /* libsqlite3.tbd */,
 				942205081BC9080B00363A8A /* libz.tbd */,
 				942205061BC9080500363A8A /* SystemConfiguration.framework */,
@@ -226,9 +236,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942205131BC91FC100363A8A /* ParseSignUpVC.swift in Sources */,
 				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
-				07C650A31BC8F17A00914FA0 /* ViewController.swift in Sources */,
+				07C650A31BC8F17A00914FA0 /* InitialViewController.swift in Sources */,
+				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
 				07C650B61BC8F6FA00914FA0 /* Task.swift in Sources */,
 				07C650A11BC8F17A00914FA0 /* AppDelegate.swift in Sources */,
