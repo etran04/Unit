@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import Parse
 
 class RootTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="RnG-hU-acG">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Meetings-->
@@ -85,7 +86,7 @@
         <!--Tasks-->
         <scene sceneID="T3b-r1-cz3">
             <objects>
-                <tableViewController id="IDp-Ti-6W0" sceneMemberID="viewController">
+                <tableViewController id="IDp-Ti-6W0" customClass="RootTableViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fYo-W2-2Ai">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,11 +106,51 @@
                             <outlet property="delegate" destination="IDp-Ti-6W0" id="UPY-23-tef"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Tasks" id="eps-0z-MpU"/>
+                    <navigationItem key="navigationItem" title="Tasks" id="eps-0z-MpU">
+                        <barButtonItem key="backBarButtonItem" title="Cancel" id="tle-nQ-ZO3"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="4IT-Kq-Nqt">
+                            <connections>
+                                <segue destination="032-bm-xkc" kind="show" id="mw5-w3-qp8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alN-7H-ZBz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1671" y="-3"/>
+        </scene>
+        <!--New Task-->
+        <scene sceneID="qYw-9i-l8Z">
+            <objects>
+                <viewController id="032-bm-xkc" customClass="AddTaskViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="huf-it-hdn"/>
+                        <viewControllerLayoutGuide type="bottom" id="bm8-Wv-IWI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ROw-oc-rEn">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
+                                <rect key="frame" x="273" y="491" width="55" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F8d-V3-wl3" firstAttribute="leading" secondItem="ROw-oc-rEn" secondAttribute="leadingMargin" constant="30" id="HOa-Vn-4DI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F8d-V3-wl3" secondAttribute="trailing" constant="30" id="O8w-76-cXt"/>
+                            <constraint firstItem="bm8-Wv-IWI" firstAttribute="top" secondItem="F8d-V3-wl3" secondAttribute="bottom" constant="30" id="t3b-Ac-kQ5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Task" id="2L6-3Y-w9J"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="blM-Ec-jQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2492" y="-2"/>
         </scene>
         <!--Settings-->
         <scene sceneID="N5y-ax-gFy">
