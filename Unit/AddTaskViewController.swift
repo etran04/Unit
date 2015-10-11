@@ -12,6 +12,7 @@ import Parse
 
 class AddTaskViewController : UIViewController {
     
+    @IBOutlet weak var titleField: UITextField!
     @IBOutlet weak var addTaskButton: UIButton!
     @IBOutlet weak var taskDescription: UITextField!
     @IBOutlet weak var priorityLevel: UISegmentedControl!
@@ -24,7 +25,10 @@ class AddTaskViewController : UIViewController {
             
             let newTask = PFObject(className: "Task")
             //TODO - access current team to get teamID. store locally to use in getObjectInBackgroundWithId
+            newTask["creator"] = PFUser.currentUser()?.username
+            newTask["title"] = self.titleField.text
             newTask["teamId"] = teamId
+            newTask["assignedTo"] = ""
             newTask["description"] = self.taskDescription.text
             newTask["priorityLevel"] = self.priorityLevel.selectedSegmentIndex
             newTask.saveInBackgroundWithBlock {
