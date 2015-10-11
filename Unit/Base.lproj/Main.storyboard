@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meetings" id="yby-O3-HVG"/>
+                    <tabBarItem key="tabBarItem" title="Meetings" image="Drawing (2)" selectedImage="Drawing (2)" id="yby-O3-HVG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anF-PG-lqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,7 +259,7 @@
         <scene sceneID="tjt-Bk-gL0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r3o-WH-X3V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" id="GTL-kN-6py"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="Drawing (1)" selectedImage="Drawing (1)" id="GTL-kN-6py"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1rh-ak-hle">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -288,7 +288,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="b9a-vi-0N1">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b9a-vi-0N1" id="dGh-tw-Den">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -342,7 +342,7 @@
                                     <segment title="High"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
                                 <rect key="frame" x="46" y="558" width="283" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Confirm">
@@ -404,16 +404,21 @@
                             <constraint firstItem="9BG-eh-smb" firstAttribute="centerY" secondItem="4W3-9G-PG9" secondAttribute="centerY" id="se9-pA-f5f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="ijb-7Y-haQ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Drawing (3)" selectedImage="Drawing (3)" id="ijb-7Y-haQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWP-L1-GnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-6" y="1386"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Drawing (1)" width="37" height="37"/>
+        <image name="Drawing (2)" width="37" height="37"/>
+        <image name="Drawing (3)" width="37" height="37"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wBA-jV-5sE"/>
-        <segue reference="ctZ-ks-AGh"/>
-        <segue reference="3X2-qO-dgJ"/>
+        <segue reference="8BF-bo-bT3"/>
+        <segue reference="bfQ-Ep-BHi"/>
     </inferredMetricsTieBreakers>
 </document>
