@@ -19,6 +19,15 @@
 		07FF732C1BC95FBA005AF366 /* CreateTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732B1BC95FBA005AF366 /* CreateTeamViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07FF732E1BC963B9005AF366 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732D1BC963B9005AF366 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		07FF73301BC9B769005AF366 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07FF73321BCAAE8F005AF366 /* MeetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73311BCAAE8F005AF366 /* MeetingViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		07FF73C31BCABE60005AF366 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73961BCABE60005AF366 /* DateUtil.m */; settings = {ASSET_TAGS = (); }; };
+		07FF73C41BCABE60005AF366 /* DMLazyScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73991BCABE60005AF366 /* DMLazyScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		07FF73C51BCABE60005AF366 /* SACalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FF739B1BCABE60005AF366 /* SACalendar.m */; settings = {ASSET_TAGS = (); }; };
+		07FF73C61BCABE60005AF366 /* SACalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FF739D1BCABE60005AF366 /* SACalendarCell.m */; settings = {ASSET_TAGS = (); }; };
+		07FF73D51BCABE60005AF366 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 07FF73BF1BCABE60005AF366 /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		07FF73D61BCABE60005AF366 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73C01BCABE60005AF366 /* README.md */; settings = {ASSET_TAGS = (); }; };
+		07FF73D71BCABE60005AF366 /* demo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07FF73C21BCABE60005AF366 /* demo.png */; settings = {ASSET_TAGS = (); }; };
+		07FF73DF1BCABFB2005AF366 /* MeetingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 07FF73DE1BCABFB2005AF366 /* MeetingVC.m */; settings = {ASSET_TAGS = (); }; };
 		942204F51BC9072400363A8A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F41BC9072400363A8A /* Parse.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F71BC9072B00363A8A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F61BC9072B00363A8A /* Bolts.framework */; settings = {ASSET_TAGS = (); }; };
 		942204F91BC907D900363A8A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 942204F81BC907D900363A8A /* AudioToolbox.framework */; };
@@ -56,6 +65,21 @@
 		07FF732B1BC95FBA005AF366 /* CreateTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewController.swift; sourceTree = "<group>"; };
 		07FF732D1BC963B9005AF366 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		07FF73311BCAAE8F005AF366 /* MeetingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeetingViewController.swift; sourceTree = "<group>"; };
+		07FF737E1BCAB44E005AF366 /* MyHeaderForSACalendar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyHeaderForSACalendar.h; sourceTree = "<group>"; };
+		07FF73951BCABE60005AF366 /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		07FF73961BCABE60005AF366 /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		07FF73981BCABE60005AF366 /* DMLazyScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMLazyScrollView.h; sourceTree = "<group>"; };
+		07FF73991BCABE60005AF366 /* DMLazyScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMLazyScrollView.m; sourceTree = "<group>"; };
+		07FF739A1BCABE60005AF366 /* SACalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACalendar.h; sourceTree = "<group>"; };
+		07FF739B1BCABE60005AF366 /* SACalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACalendar.m; sourceTree = "<group>"; };
+		07FF739C1BCABE60005AF366 /* SACalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACalendarCell.h; sourceTree = "<group>"; };
+		07FF739D1BCABE60005AF366 /* SACalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SACalendarCell.m; sourceTree = "<group>"; };
+		07FF739E1BCABE60005AF366 /* SACalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SACalendarConstants.h; sourceTree = "<group>"; };
+		07FF73BF1BCABE60005AF366 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		07FF73C01BCABE60005AF366 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		07FF73C21BCABE60005AF366 /* demo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demo.png; sourceTree = "<group>"; };
+		07FF73DE1BCABFB2005AF366 /* MeetingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetingVC.m; path = ../MeetingVC.m; sourceTree = "<group>"; };
 		942204F41BC9072400363A8A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = Unit/Parse.framework; sourceTree = "<group>"; };
 		942204F61BC9072B00363A8A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = Unit/Bolts.framework; sourceTree = "<group>"; };
 		942204F81BC907D900363A8A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -104,6 +128,7 @@
 		07C650941BC8F17A00914FA0 = {
 			isa = PBXGroup;
 			children = (
+				07FF73931BCABE60005AF366 /* SACalendar */,
 				942204F31BC9071800363A8A /* Frameworks */,
 				07C6509F1BC8F17A00914FA0 /* Unit */,
 				07C6509E1BC8F17A00914FA0 /* Products */,
@@ -145,6 +170,9 @@
 				94664FD01BC9538700B70A64 /* AddTaskViewController.swift */,
 				07FF732D1BC963B9005AF366 /* SettingsViewController.swift */,
 				07FF732F1BC9B769005AF366 /* EditTaskViewController.swift */,
+				07FF73311BCAAE8F005AF366 /* MeetingViewController.swift */,
+				07FF737E1BCAB44E005AF366 /* MyHeaderForSACalendar.h */,
+				07FF73DE1BCABFB2005AF366 /* MeetingVC.m */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -165,6 +193,49 @@
 				9422050C1BC90B0E00363A8A /* Team.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		07FF73931BCABE60005AF366 /* SACalendar */ = {
+			isa = PBXGroup;
+			children = (
+				07FF73941BCABE60005AF366 /* Classes */,
+				07FF73BF1BCABE60005AF366 /* LICENSE */,
+				07FF73C01BCABE60005AF366 /* README.md */,
+				07FF73C11BCABE60005AF366 /* Screenshots */,
+			);
+			path = SACalendar;
+			sourceTree = "<group>";
+		};
+		07FF73941BCABE60005AF366 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				07FF73951BCABE60005AF366 /* DateUtil.h */,
+				07FF73961BCABE60005AF366 /* DateUtil.m */,
+				07FF73971BCABE60005AF366 /* DMLazyScrollView */,
+				07FF739A1BCABE60005AF366 /* SACalendar.h */,
+				07FF739B1BCABE60005AF366 /* SACalendar.m */,
+				07FF739C1BCABE60005AF366 /* SACalendarCell.h */,
+				07FF739D1BCABE60005AF366 /* SACalendarCell.m */,
+				07FF739E1BCABE60005AF366 /* SACalendarConstants.h */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		07FF73971BCABE60005AF366 /* DMLazyScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				07FF73981BCABE60005AF366 /* DMLazyScrollView.h */,
+				07FF73991BCABE60005AF366 /* DMLazyScrollView.m */,
+			);
+			path = DMLazyScrollView;
+			sourceTree = "<group>";
+		};
+		07FF73C11BCABE60005AF366 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				07FF73C21BCABE60005AF366 /* demo.png */,
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		942204F31BC9071800363A8A /* Frameworks */ = {
@@ -253,7 +324,9 @@
 			files = (
 				07C650AB1BC8F17A00914FA0 /* LaunchScreen.storyboard in Resources */,
 				07C650A81BC8F17A00914FA0 /* Assets.xcassets in Resources */,
+				07FF73D51BCABE60005AF366 /* LICENSE in Resources */,
 				07C650A61BC8F17A00914FA0 /* Main.storyboard in Resources */,
+				07FF73D71BCABE60005AF366 /* demo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,19 +338,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				9422050D1BC90B0E00363A8A /* Team.swift in Sources */,
+				07FF73C31BCABE60005AF366 /* DateUtil.m in Sources */,
 				07C650B81BC8F76600914FA0 /* User.swift in Sources */,
 				07C650BE1BC9162100914FA0 /* TabVC.swift in Sources */,
+				07FF73321BCAAE8F005AF366 /* MeetingViewController.swift in Sources */,
 				9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */,
+				07FF73D61BCABE60005AF366 /* README.md in Sources */,
+				07FF73C61BCABE60005AF366 /* SACalendarCell.m in Sources */,
+				07FF73DF1BCABFB2005AF366 /* MeetingVC.m in Sources */,
 				942205191BC92A0700363A8A /* ParseSignUpVC.swift in Sources */,
 				07FF73301BC9B769005AF366 /* EditTaskViewController.swift in Sources */,
 				942205111BC91DDB00363A8A /* ParseLoginViewController.swift in Sources */,
 				94664FD11BC9538700B70A64 /* AddTaskViewController.swift in Sources */,
+				07FF73C41BCABE60005AF366 /* DMLazyScrollView.m in Sources */,
 				07C650BA1BC8FBB300914FA0 /* GlobalConstants.swift in Sources */,
 				07C650B61BC8F6FA00914FA0 /* Task.swift in Sources */,
 				07FF73281BC92CFD005AF366 /* RootTableViewController.swift in Sources */,
 				07FF732E1BC963B9005AF366 /* SettingsViewController.swift in Sources */,
 				07C650A11BC8F17A00914FA0 /* AppDelegate.swift in Sources */,
 				07FF732C1BC95FBA005AF366 /* CreateTeamViewController.swift in Sources */,
+				07FF73C51BCABE60005AF366 /* SACalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,10 +473,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Unit",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Unit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theDRE.Unit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Unit/MyHeaderForSACalendar.h";
 			};
 			name = Debug;
 		};
@@ -409,10 +492,13 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Unit",
 				);
+				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = Unit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theDRE.Unit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/Unit/MyHeaderForSACalendar.h";
 			};
 			name = Release;
 		};
