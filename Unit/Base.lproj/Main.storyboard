@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Ii-iA-XtC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DIc-NO-SNm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -143,48 +143,66 @@
                         <viewControllerLayoutGuide type="bottom" id="EmU-EK-TuM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eC6-vG-ush">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dv-V4-zFu">
-                                <rect key="frame" x="234" y="51" width="133" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team Member Emails: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0T-je-V1w">
+                                <rect key="frame" x="16" y="125" width="173" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dnr-Zn-VDE">
-                                <rect key="frame" x="290" y="138" width="173" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team Member Emails: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n0T-je-V1w">
-                                <rect key="frame" x="214" y="242" width="173" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-Ph-bN8">
+                                <rect key="frame" x="16" y="74.5" width="93.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Team name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRQ-Ph-bN8">
-                                <rect key="frame" x="183" y="142" width="94" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-3U-oZI">
-                                <rect key="frame" x="273" y="533" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4FM-3U-oZI">
+                                <rect key="frame" x="160" y="471" width="55" height="30"/>
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="createTeamButtonPressed:" destination="4rD-nA-7wW" eventType="touchUpInside" id="5ch-qQ-vcM"/>
                                     <segue destination="K17-l4-dH5" kind="presentation" id="wBA-jV-5sE"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-8K-s9U">
-                                <rect key="frame" x="144" y="290" width="312" height="186"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email, email, ... , email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-8K-s9U">
+                                <rect key="frame" x="16" y="170.5" width="335" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Lna-Kd-uz0"/>
+                                    <constraint firstAttribute="width" constant="335" id="tYt-rQ-S1d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9P3-Ew-1VX">
+                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
+                                <items>
+                                    <navigationItem title="Create Team" id="Pwx-3R-tDr"/>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dnr-Zn-VDE">
+                                <rect key="frame" x="139.5" y="70" width="219.5" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="iRQ-Ph-bN8" secondAttribute="leading" id="50v-4Y-CGv"/>
+                            <constraint firstItem="eGq-8K-s9U" firstAttribute="leading" secondItem="n0T-je-V1w" secondAttribute="leading" id="9vU-9P-uby"/>
+                            <constraint firstItem="iRQ-Ph-bN8" firstAttribute="centerY" secondItem="Dnr-Zn-VDE" secondAttribute="centerY" id="JBO-HP-JGb"/>
+                            <constraint firstItem="Dnr-Zn-VDE" firstAttribute="leading" secondItem="iRQ-Ph-bN8" secondAttribute="trailing" constant="30" id="dKo-lX-Xnt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Dnr-Zn-VDE" secondAttribute="trailing" id="eGW-5t-htQ"/>
+                            <constraint firstItem="n0T-je-V1w" firstAttribute="top" secondItem="iRQ-Ph-bN8" secondAttribute="bottom" constant="30" id="iOh-06-ZLb"/>
+                            <constraint firstItem="Dnr-Zn-VDE" firstAttribute="top" secondItem="qE3-wj-vy6" secondAttribute="bottom" constant="50" id="nF1-Y3-av8"/>
+                            <constraint firstItem="4FM-3U-oZI" firstAttribute="top" secondItem="eGq-8K-s9U" secondAttribute="bottom" constant="61" id="okt-n3-vSw"/>
+                            <constraint firstItem="eGq-8K-s9U" firstAttribute="top" secondItem="n0T-je-V1w" secondAttribute="bottom" constant="25" id="p6e-gk-Z0x"/>
+                            <constraint firstItem="4FM-3U-oZI" firstAttribute="centerX" secondItem="eC6-vG-ush" secondAttribute="centerX" id="wLL-5i-Soh"/>
+                            <constraint firstItem="n0T-je-V1w" firstAttribute="leading" secondItem="iRQ-Ph-bN8" secondAttribute="leading" id="xCx-as-dO5"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="emailListField" destination="eGq-8K-s9U" id="CMF-L1-mEx"/>
                         <outlet property="teamNameField" destination="Dnr-Zn-VDE" id="k7x-Xa-vkQ"/>
@@ -192,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="inz-gm-9iP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="944" y="-763"/>
+            <point key="canvasLocation" x="943.5" y="-763.5"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="g18-6I-5mg">
@@ -203,7 +221,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fiO-V9-OIU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K0E-eB-emZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -264,15 +282,15 @@
             <objects>
                 <tableViewController id="IDp-Ti-6W0" customClass="RootTableViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fYo-W2-2Ai">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="b9a-vi-0N1">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b9a-vi-0N1" id="dGh-tw-Den">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -307,7 +325,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bm8-Wv-IWI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ROw-oc-rEn">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-lF-rpe">
@@ -324,7 +342,7 @@
                                 </segments>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F8d-V3-wl3">
-                                <rect key="frame" x="50" y="491" width="500" height="30"/>
+                                <rect key="frame" x="46" y="558" width="283" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Confirm">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -361,7 +379,7 @@
                         <viewControllerLayoutGuide type="bottom" id="qkA-xk-VfT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4W3-9G-PG9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-eh-smb">
