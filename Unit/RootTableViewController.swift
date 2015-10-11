@@ -58,6 +58,7 @@ class RootTableViewController: UITableViewController {
                     
                     // Sort all tasks to each user
                     let tasksQuery = PFQuery(className: "Task")
+                    tasksQuery.whereKey("teamId", equalTo: teamId)
                     tasksQuery.findObjectsInBackgroundWithBlock() {
                         (tasks: [PFObject]?, error: NSError?) -> Void in
                         if error == nil && tasks != nil {
@@ -91,6 +92,12 @@ class RootTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.usersToTaskTitles = [String: [String]]()
+        self.teamMembers = [String]()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

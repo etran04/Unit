@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="4Ii-iA-XtC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="DIc-NO-SNm">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -163,7 +163,7 @@
                                 <state key="normal" title="Confirm"/>
                                 <connections>
                                     <action selector="createTeamButtonPressed:" destination="4rD-nA-7wW" eventType="touchUpInside" id="5ch-qQ-vcM"/>
-                                    <segue destination="K17-l4-dH5" kind="presentation" id="wBA-jV-5sE"/>
+                                    <segue destination="IDp-Ti-6W0" kind="presentation" id="qwV-I3-shC"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="email, email, ... , email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eGq-8K-s9U">
@@ -222,7 +222,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fiO-V9-OIU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="K0E-eB-emZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -283,15 +283,15 @@
             <objects>
                 <tableViewController id="IDp-Ti-6W0" customClass="RootTableViewController" customModule="Unit" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fYo-W2-2Ai">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="b9a-vi-0N1">
-                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b9a-vi-0N1" id="dGh-tw-Den">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -326,7 +326,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bm8-Wv-IWI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ROw-oc-rEn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bu6-lF-rpe">
@@ -386,10 +386,10 @@
                         <viewControllerLayoutGuide type="bottom" id="qkA-xk-VfT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="4W3-9G-PG9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-eh-smb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9BG-eh-smb">
                                 <rect key="frame" x="276" y="285" width="48" height="30"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -417,8 +417,7 @@
         <image name="Drawing (3)" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="wBA-jV-5sE"/>
-        <segue reference="8BF-bo-bT3"/>
+        <segue reference="3X2-qO-dgJ"/>
         <segue reference="bfQ-Ep-BHi"/>
     </inferredMetricsTieBreakers>
 </document>
