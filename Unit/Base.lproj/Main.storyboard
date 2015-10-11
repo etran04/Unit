@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Meetings" image="Drawing (2)" selectedImage="Drawing (2)" id="yby-O3-HVG"/>
+                    <tabBarItem key="tabBarItem" title="Meetings" image="Drawing (2).png" selectedImage="Drawing (2).png" id="yby-O3-HVG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anF-PG-lqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -259,7 +259,7 @@
         <scene sceneID="tjt-Bk-gL0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="r3o-WH-X3V" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tasks" image="Drawing (1)" selectedImage="Drawing (1)" id="GTL-kN-6py"/>
+                    <tabBarItem key="tabBarItem" title="Tasks" image="Drawing (1).png" selectedImage="Drawing (1).png" id="GTL-kN-6py"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1rh-ak-hle">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -404,7 +404,7 @@
                             <constraint firstItem="9BG-eh-smb" firstAttribute="centerY" secondItem="4W3-9G-PG9" secondAttribute="centerY" id="se9-pA-f5f"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="Drawing (3)" selectedImage="Drawing (3)" id="ijb-7Y-haQ"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Drawing (3).png" selectedImage="Drawing (3).png" id="ijb-7Y-haQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWP-L1-GnC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -412,9 +412,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Drawing (1)" width="37" height="37"/>
-        <image name="Drawing (2)" width="37" height="37"/>
-        <image name="Drawing (3)" width="37" height="37"/>
+        <image name="Drawing (1).png" width="37" height="37"/>
+        <image name="Drawing (2).png" width="37" height="37"/>
+        <image name="Drawing (3).png" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Pwb-au-0Qt"/>
