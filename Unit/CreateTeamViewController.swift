@@ -53,8 +53,6 @@ class CreateTeamViewController: UIViewController {
                         newEmailToTeam["TeamName"] = teamName
                         newEmailToTeam.saveInBackground()
                     }
-                    
-//                    self.performSegueWithIdentifier("goToRootTableVC", sender: self)
                 })
             })
         })
