@@ -17,6 +17,18 @@ class AddTaskViewController : UIViewController {
     @IBOutlet weak var taskDescription: UITextField!
     @IBOutlet weak var priorityLevel: UISegmentedControl!
     
+    override func viewDidLoad() {
+        //Looks for single or multiple taps.
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "DismissKeyboard")
+        view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    func DismissKeyboard(){
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
     @IBAction func addTaskButtonPressed(sender: AnyObject) {
         let user = PFUser.currentUser()
         

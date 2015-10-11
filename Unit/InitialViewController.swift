@@ -59,6 +59,10 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
         self.dismissViewControllerAnimated(true, completion: nil)
         
         didLogin = true;
+        if (PFUser.currentUser()?["currentTeam"] != nil) {
+            self.found = true
+            return
+        }
         // Check if user is suppose to be assigned a team
         let query = PFQuery(className:"EmailToTeam")
         query.findObjectsInBackgroundWithBlock({
