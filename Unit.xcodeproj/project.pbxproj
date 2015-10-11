@@ -38,6 +38,9 @@
 		9422051D1BC92ABF00363A8A /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9422051C1BC92ABF00363A8A /* EventKit.framework */; };
 		9422051E1BC92E3000363A8A /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C650A21BC8F17A00914FA0 /* InitialViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		94664FD11BC9538700B70A64 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94664FD01BC9538700B70A64 /* AddTaskViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		94A8EF7A1BCA585A0031F6E4 /* Drawing (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 94A8EF771BCA585A0031F6E4 /* Drawing (1).png */; settings = {ASSET_TAGS = (); }; };
+		94A8EF7B1BCA585A0031F6E4 /* Drawing (2).png in Resources */ = {isa = PBXBuildFile; fileRef = 94A8EF781BCA585A0031F6E4 /* Drawing (2).png */; settings = {ASSET_TAGS = (); }; };
+		94A8EF7C1BCA585A0031F6E4 /* Drawing (3).png in Resources */ = {isa = PBXBuildFile; fileRef = 94A8EF791BCA585A0031F6E4 /* Drawing (3).png */; settings = {ASSET_TAGS = (); }; };
 		94F02A8B1BCA50FD00069900 /* Unit Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F02A8A1BCA50FD00069900 /* Unit Logo.png */; settings = {ASSET_TAGS = (); }; };
 		94F02A8D1BCA529400069900 /* Unit Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94F02A8C1BCA529400069900 /* Unit Icon.png */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -76,6 +79,9 @@
 		9422051A1BC92AB900363A8A /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
 		9422051C1BC92ABF00363A8A /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
 		94664FD01BC9538700B70A64 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		94A8EF771BCA585A0031F6E4 /* Drawing (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Drawing (1).png"; path = "../../../../Downloads/Drawing (1).png"; sourceTree = "<group>"; };
+		94A8EF781BCA585A0031F6E4 /* Drawing (2).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Drawing (2).png"; path = "../../../../Downloads/Drawing (2).png"; sourceTree = "<group>"; };
+		94A8EF791BCA585A0031F6E4 /* Drawing (3).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Drawing (3).png"; path = "../../../../Downloads/Drawing (3).png"; sourceTree = "<group>"; };
 		94F02A8A1BCA50FD00069900 /* Unit Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unit Logo.png"; sourceTree = "<group>"; };
 		94F02A8C1BCA529400069900 /* Unit Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Unit Icon.png"; path = "../../../../Desktop/Unit Icon.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +136,9 @@
 				07C650A71BC8F17A00914FA0 /* Assets.xcassets */,
 				94F02A8C1BCA529400069900 /* Unit Icon.png */,
 				07C650A41BC8F17A00914FA0 /* Main.storyboard */,
+				94A8EF771BCA585A0031F6E4 /* Drawing (1).png */,
+				94A8EF781BCA585A0031F6E4 /* Drawing (2).png */,
+				94A8EF791BCA585A0031F6E4 /* Drawing (3).png */,
 				07C650A01BC8F17A00914FA0 /* AppDelegate.swift */,
 				07C650B91BC8FBB300914FA0 /* GlobalConstants.swift */,
 				07C650B41BC8F6D900914FA0 /* Models */,
@@ -259,6 +268,9 @@
 			files = (
 				07C650AB1BC8F17A00914FA0 /* LaunchScreen.storyboard in Resources */,
 				94F02A8B1BCA50FD00069900 /* Unit Logo.png in Resources */,
+				94A8EF7C1BCA585A0031F6E4 /* Drawing (3).png in Resources */,
+				94A8EF7B1BCA585A0031F6E4 /* Drawing (2).png in Resources */,
+				94A8EF7A1BCA585A0031F6E4 /* Drawing (1).png in Resources */,
 				07C650A81BC8F17A00914FA0 /* Assets.xcassets in Resources */,
 				94F02A8D1BCA529400069900 /* Unit Icon.png in Resources */,
 				07C650A61BC8F17A00914FA0 /* Main.storyboard in Resources */,
