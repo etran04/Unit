@@ -19,6 +19,7 @@ class RootTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
+        //PFUser.logOut()
         self.tableView.editing = true
         let user = PFUser.currentUser()
         

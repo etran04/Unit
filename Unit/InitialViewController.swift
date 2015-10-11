@@ -76,7 +76,13 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                     if email["Email"] as! String == (PFUser.currentUser()?.email)!{
                         print("email: \(email)")
                         self.found = true
-                        return
+                        let teamQuery = PFQuery(className: "Team")
+                        teamQuery.whereKey("name", equalTo: email["TeamName"])
+                        teamQuery.getFirstObjectInBackgroundWithBlock( {
+                            (team: PFObject?, error: NSError?) -> Void in
+                            PFUser.currentUser()?["currentTeam"] = team?.objectId
+                            PFUser.currentUser()?.saveInBackground()
+                        })
                     }
                 }
                 
