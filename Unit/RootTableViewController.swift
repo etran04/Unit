@@ -11,52 +11,84 @@ import Parse
 
 class RootTableViewController: UITableViewController {
     
-    var taskDescriptions = [String]()
+    var usersToTaskTitles = [String: [String]]()
     var teamMembers = [String]()
         
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.tableView.editing = true
-        
-        taskDescriptions = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
-        
         let user = PFUser.currentUser()
         
+        teamMembers.append("Unassigned Tasks")
+        self.usersToTaskTitles["Unassigned Tasks"] = [String]()
+        self.teamMembers.append((PFUser.currentUser()?.username)!)
+        self.usersToTaskTitles[(PFUser.currentUser()?.username!)!] = [String]()
+        
         user?.fetchInBackgroundWithBlock({(object: PFObject?, error: NSError?) -> Void in
-            let username = object!.objectForKey("username") as! String
             let teamId = object!.objectForKey("currentTeam") as! String
             
-            self.teamMembers.append("Unassigned Tasks")
-            self.teamMembers.append(username)
-            
+            // Add username labels to teams
             let query = PFQuery(className:"Team")
+            let username = object!.objectForKey("username") as! String
+            
             query.includeKey("Users")
             query.getObjectInBackgroundWithId(teamId) {
                 (team: PFObject?, error: NSError?) -> Void in
                 print(team)
                 if error == nil && team != nil {
                     for user in team?["Users"] as! [PFUser] {
+                        print(user["username"] as! String)
                         if user["username"] as! String != username {
                             self.teamMembers.append(user["username"] as! String)
+                            self.usersToTaskTitles[user.username!] = [String]()
                         }
                     }
                 }
-                self.tableView.reloadData()
+                
+                // Go through every user and initialize a task title list for them
+                let usersQuery = PFUser.query()
+                usersQuery!.findObjectsInBackgroundWithBlock {
+                    (results: [PFObject]?, error: NSError?) -> Void in
+                    for user in results as! [PFUser] {
+                        self.usersToTaskTitles[user.username!] = [String]()
+                    }
+                    
+                    // Sort all tasks to each user
+                    let tasksQuery = PFQuery(className: "Task")
+                    tasksQuery.findObjectsInBackgroundWithBlock() {
+                        (tasks: [PFObject]?, error: NSError?) -> Void in
+                        if error == nil && tasks != nil {
+                            for task in tasks! {
+                                // it's assigned to someone
+                                let personAssigned = task["assignedTo"] as! String
+                                if (personAssigned != "") {
+                                    (self.usersToTaskTitles[personAssigned])?.append(task["title"] as! (String))
+                                    print(self.usersToTaskTitles)
+                                } else {
+                                    //unassigned task
+                                    (self.usersToTaskTitles["Unassigned Tasks"])?.append(task["title"] as! (String))
+                                }
+                            }
+                        }
+                        self.tableView.reloadData()
+                    }
+                }
             }
         })
-            
+        
         //teamMembers = ["Juan", "Quan", "Tran", "Wan"]
         tableView.estimatedRowHeight = 50
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        tableView.reloadData()
+
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -73,7 +105,7 @@ class RootTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return taskDescriptions.count
+        return usersToTaskTitles[teamMembers[section]]!.count
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
@@ -107,12 +139,13 @@ class RootTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Configure the cell...
         let cell =
-        self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+            self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
     
         let row = indexPath.row
-        cell.textLabel!.font =
-        UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
-        cell.textLabel!.text = taskDescriptions[row]
+        
+        cell.textLabel!.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        cell.textLabel!.text = usersToTaskTitles[teamMembers[indexPath.section]]?[row]
+        
         return cell
     }
     

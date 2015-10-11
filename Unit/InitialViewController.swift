@@ -76,9 +76,9 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
                     }
                 }
                 
-                if self.found == false {
-                    self.getToCreateVC()
-                }
+                //if self.found == false {
+                //    self.getToCreateVC()
+                //}
                 
             } else {
                 print("Error on query for EmailToTeam")
