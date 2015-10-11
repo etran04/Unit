@@ -54,7 +54,7 @@ class CreateTeamViewController: UIViewController {
                         newEmailToTeam.saveInBackground()
                     }
                     
-                    self.performSegueWithIdentifier("goToRootTableVC", sender: self)
+//                    self.performSegueWithIdentifier("goToRootTableVC", sender: self)
                 })
             })
         })

@@ -144,6 +144,7 @@ class RootTableViewController: UITableViewController {
         let row = indexPath.row
         
         cell.textLabel!.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+        print(indexPath.section)
         cell.textLabel!.text = usersToTaskTitles[teamMembers[indexPath.section]]?[row]
         
         return cell
