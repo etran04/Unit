@@ -16,15 +16,18 @@ class RootTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.editing = true
         
         taskDescriptions = ["Task 1", "Task 2", "Task 3", "Task 4", "Task 5"]
-        
-        teamMembers.append("Unassigned Tasks")
         
         let user = PFUser.currentUser()
         
         user?.fetchInBackgroundWithBlock({(object: PFObject?, error: NSError?) -> Void in
+            let username = object!.objectForKey("username") as! String
             let teamId = object!.objectForKey("currentTeam") as! String
+            
+            self.teamMembers.append("Unassigned Tasks")
+            self.teamMembers.append(username)
             
             let query = PFQuery(className:"Team")
             query.includeKey("Users")
@@ -33,8 +36,9 @@ class RootTableViewController: UITableViewController {
                 print(team)
                 if error == nil && team != nil {
                     for user in team?["Users"] as! [PFUser] {
-                        print(user["username"] as! String)
-                        self.teamMembers.append(user["username"] as! String)
+                        if user["username"] as! String != username {
+                            self.teamMembers.append(user["username"] as! String)
+                        }
                     }
                 }
                 self.tableView.reloadData()
@@ -64,7 +68,6 @@ class RootTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        print(teamMembers.count)
         return teamMembers.count
     }
 
@@ -76,7 +79,30 @@ class RootTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return teamMembers[section]
     }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        
+        switch section % 5 {
+        case 0:
+            label.backgroundColor = UIColor.greenColor()
+        case 1:
+            label.backgroundColor = UIColor.blueColor()
+        case 2:
+            label.backgroundColor = UIColor.yellowColor()
+        case 3:
+            label.backgroundColor = UIColor.purpleColor()
+        default:
+            label.backgroundColor = UIColor.redColor()
+        }
 
+        label.backgroundColor = label.backgroundColor?.colorWithAlphaComponent(0.1)
+        label.textColor = UIColor.darkGrayColor()
+        label.text = "  " + teamMembers[section]
+        label.font = UIFont.boldSystemFontOfSize(15)
+        
+        return label
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         // Configure the cell...
@@ -89,7 +115,17 @@ class RootTableViewController: UITableViewController {
         cell.textLabel!.text = taskDescriptions[row]
         return cell
     }
+    
+    override func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        //assign task to that person
+//        let itemToMove:String = taskDescriptions[sourceIndexPath.row]
+//        taskDescriptions.removeAtIndex(sourceIndexPath.row)
+//        taskDescriptions.insert(itemToMove, atIndex: destinationIndexPath.row)
+    }
 
+    override func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return UITableViewCellEditingStyle.None
+    }
     
 //    // Override to support conditional editing of the table view.
 //    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -117,20 +153,13 @@ class RootTableViewController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
+    
     // Override to support conditional rearranging of the table view.
     override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the item to be re-orderable.
         return true
     }
-    */
+
 
     // MARK: - Navigation
 

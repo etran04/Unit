@@ -21,6 +21,7 @@ class InitialViewController: UIViewController, PFLogInViewControllerDelegate, PF
         // Do any additional setup after loading the view, typically from a nib.
         found = false;
         didLogin = false;
+//        self.navigationController?.navigationBar.
     }
     
     
