@@ -16,6 +16,9 @@ class RootTableViewController: UITableViewController {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         self.tableView.editing = true
         let user = PFUser.currentUser()
         
@@ -25,11 +28,11 @@ class RootTableViewController: UITableViewController {
         self.usersToTaskTitles[(PFUser.currentUser()?.username!)!] = [String]()
         
         user?.fetchInBackgroundWithBlock({(object: PFObject?, error: NSError?) -> Void in
-        let teamId = object!.objectForKey("currentTeam") as! String
-        
-        // Add username labels to teams
-        let query = PFQuery(className:"Team")
-        let username = object!.objectForKey("username") as! String
+            let teamId = object!.objectForKey("currentTeam") as! String
+            
+            // Add username labels to teams
+            let query = PFQuery(className:"Team")
+            let username = object!.objectForKey("username") as! String
             
             query.includeKey("Users")
             query.getObjectInBackgroundWithId(teamId) {
@@ -75,18 +78,16 @@ class RootTableViewController: UITableViewController {
                 }
             }
         })
-
+        
         //teamMembers = ["Juan", "Quan", "Tran", "Wan"]
         tableView.estimatedRowHeight = 50
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-    }
-    
-    override func viewDidAppear(animated: Bool) {
+
         self.tableView.reloadData()
     }
 
